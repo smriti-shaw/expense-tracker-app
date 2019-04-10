@@ -1,22 +1,32 @@
-<-- Create schema for expenses -->
+drop schema `expense_tracker` ;
 CREATE SCHEMA `expense_tracker` ;
+use expense_tracker;
 
-<-- table for user personalisation -->
 create table user_personalisation(
-UserId  int(6) unsigned auto_increment primary key,
-MobileNo varchar(30),
-UserName varchar(30),
-DateOfCreation timestamp default current_timestamp
+user_id  int(11) unsigned auto_increment primary key,
+mobile_no varchar(30),
+user_name varchar(30),
+date_of_creation datetime default current_timestamp
 );
 
 create table user_auth(
-MobileNo varchar(30) primary key,
-Password varchar(30));
+mobile_no varchar(30) primary key,
+password varchar(30));
 
 create table expenses(
-Id int(6) unsigned auto_increment primary key,
-UserId int(6),
-AdditionalDetails varchar(60),
-DateOfCreation timestamp,
-Amount decimal
+Id int(11) unsigned auto_increment primary key,
+user_id int(11) unsigned,
+additional_details varchar(255),
+date_of_creation datetime,
+amount double,
+foreign key (user_id)
+references user_personalisation(user_id)
+ON DELETE CASCADE
 );
+
+
+insert into user_auth(mobile_no , password) values (9886431234 , 'password');
+insert into user_personalisation(mobile_no, user_name, date_of_creation) values (9886431234 , 'smriti', '2019-07-11');
+insert into expenses(user_id , additional_details, date_of_creation, amount) values (1, 'addiddotnal details', '2019-08-13', 122.9);
+
+select * from expenses;
