@@ -7,11 +7,15 @@ which can be consumed by any channels , either it may be web-app, mobile-app and
 This project is excellent example for begineers who want to create a Rest-apis services with Spring Boot
 
 Technologies used :
-Language : Java 8
-Database : mysql
-Framework: Spring Boot, JPA
-Conatiner : Apache Tomcat
-CI pipleline : Travis-ci
+*. Language : Java 8
+
+*. Database : mysql
+
+*. Framework: Spring Boot, JPA
+
+*. Conatiner : Apache Tomcat
+
+*. CI pipleline : Travis-ci
 
 Steps to build:
 1. Start the main method as java application.
