@@ -1,11 +1,13 @@
 package com.learnthetek.expensetracker.model;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class UserDetailsDTO {
+public class UserDetailsDTO implements Serializable {
     Integer userId;
     String mobileNo;
     String userName;
+    String email;
     LocalDateTime dateTime;
 
     public Integer getUserId() {
@@ -38,6 +40,14 @@ public class UserDetailsDTO {
 
     public void setDateTime(LocalDateTime dateTime) {
         this.dateTime = dateTime;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override

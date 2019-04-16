@@ -1,9 +1,10 @@
 package com.learnthetek.expensetracker.VO;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-public class MoneyVO {
+public class MoneyVO implements Serializable {
 
     String currency;
     BigDecimal amount;
