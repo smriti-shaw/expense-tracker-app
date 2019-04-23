@@ -4,6 +4,9 @@ Services for expense tracker
 As the name suggests expense-tracker app is open source backend system which exposes Rest apis ,
 which can be consumed by any channels , either it may be web-app, mobile-app and others.
 
+Note - Can refer one java script application which is consuming these rest apis to serve frontend purpose.
+: https://github.com/smriti-shaw/expense-tracker
+
 This project is excellent example for begineers who want to create a Rest-apis services with Spring Boot
 
 Technologies used :
